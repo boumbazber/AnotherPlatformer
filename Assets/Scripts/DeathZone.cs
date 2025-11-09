@@ -4,10 +4,10 @@ public class DeathZone : MonoBehaviour
 {
 	void OnTriggerEnter(Collider other)
 	{
-		// Проверяем, что это игрок
+		// РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ СЌС‚Рѕ РёРіСЂРѕРє
 		if (other.TryGetComponent<PlayerController>(out var player))
 		{
-			// телепортируем в начало уровня
+			// С‚РµР»РµРїРѕСЂС‚РёСЂСѓРµРј РІ РЅР°С‡Р°Р»Рѕ СѓСЂРѕРІРЅСЏ
 			player.transform.position = new Vector3(0, 1, 0);
 		}
 	}
