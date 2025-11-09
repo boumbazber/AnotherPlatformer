@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,12 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			GetComponent<Rigidbody>().AddForce(Vector3.up * JumpForce);
+		}
+
+		// выход в меню
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			SceneManager.LoadScene("Menu");
 		}
 	}
 }
