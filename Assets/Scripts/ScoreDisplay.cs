@@ -4,20 +4,20 @@ using UnityEngine.SceneManagement;
 
 public class ScoreDisplay : MonoBehaviour
 {
-	// текст TextMeshPro для вывода текста
+	// С‚РµРєСЃС‚ TextMeshPro РґР»СЏ РІС‹РІРѕРґР° С‚РµРєСЃС‚Р°
 	public TextMeshProUGUI ScoreText;
-	// текущие очки
+	// С‚РµРєСѓС‰РёРµ РѕС‡РєРё
 	public int CurrentScore = 0;
 
 	void Update()
 	{
-		// Каждый кадр обновляем текст на экране
-		ScoreText.text = $"Монеты: {CurrentScore} / 10";
+		// РљР°Р¶РґС‹Р№ РєР°РґСЂ РѕР±РЅРѕРІР»СЏРµРј С‚РµРєСЃС‚ РЅР° СЌРєСЂР°РЅРµ
+		ScoreText.text = $"РњРѕРЅРµС‚С‹: {CurrentScore} / 10";
 
-		// если собраны все монеты, загружаем сцену главного меню
+		// РµСЃР»Рё СЃРѕР±СЂР°РЅС‹ РІСЃРµ РјРѕРЅРµС‚С‹, Р·Р°РіСЂСѓР¶Р°РµРј СЃС†РµРЅСѓ РіР»Р°РІРЅРѕРіРѕ РјРµРЅСЋ
 		if (CurrentScore == 10)
 		{
-			SceneManager.LoadScene("MainLevel");
+			SceneManager.LoadScene("Menu");
 		}
 	}
 }

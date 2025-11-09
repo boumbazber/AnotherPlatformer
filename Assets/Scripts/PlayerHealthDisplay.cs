@@ -1,4 +1,4 @@
-﻿using TMPro;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,7 +17,7 @@ public class PlayerHealthDisplay : MonoBehaviour
 		// если здоровье опустилось до нуля, загружаем сцену главного меню
 		if (CurrentHealth <= 0)
 		{
-			SceneManager.LoadScene("MainLevel");
+			SceneManager.LoadScene("Menu");
 		}
 	}
 }
